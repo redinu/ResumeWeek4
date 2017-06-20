@@ -28,11 +28,11 @@ CREATE TABLE `resumeapp`.`skills` (
   `proficiency` INT NULL,
   `personId` INT NULL,
   PRIMARY KEY (`skillId`));
-  
+
 CREATE TABLE `resumeapp`.`education` (
   `eduId` INT NOT NULL AUTO_INCREMENT,
   `degree` VARCHAR(50) NULL,
   `institute` VARCHAR(50) NULL,
-  `year` DATETIME NULL,
+  `year` int NULL,
   `personId` INT NULL,
   PRIMARY KEY (`eduId`));

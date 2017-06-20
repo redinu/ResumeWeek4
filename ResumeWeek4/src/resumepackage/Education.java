@@ -42,7 +42,7 @@ public class Education {
 		this.year = year;
 	} 	
 	
-	@SuppressWarnings("null")
+	
 	public void addEduToDB(int personId){
 		
 		Connection con = null;
@@ -61,7 +61,7 @@ public class Education {
 			
 			pstmt.executeUpdate();
 			
-			con.prepareStatement(getEduId);
+			pstmt = con.prepareStatement(getEduId);
 			pstmt.setInt(1, personId);
 			pstmt.setString(2, this.degree);
 			rs = pstmt.executeQuery();
